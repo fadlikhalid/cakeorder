@@ -1,0 +1,23 @@
+<form action="{{ route('cakes.sizes.store', $cake->id) }}" method="POST" class="mt-3">
+    @csrf
+    <div class="row g-2">
+        <div class="col-md-4">
+            <input type="text" 
+                   name="size" 
+                   class="form-control" 
+                   placeholder="Size (e.g., 6-inch)"
+                   required>
+        </div>
+        <div class="col-md-4">
+            <input type="number" 
+                   name="price" 
+                   class="form-control" 
+                   placeholder="Price"
+                   step="0.01"
+                   required>
+        </div>
+        <div class="col-md-4">
+            <button type="submit" class="btn btn-primary w-100">Add Size</button>
+        </div>
+    </div>
+</form> 

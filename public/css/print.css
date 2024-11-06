@@ -1,0 +1,156 @@
+/* Print styles */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 20px;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background: #fff;
+}
+
+.print-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    color: #000;
+}
+
+.order-number {
+    font-size: 15px;
+    color: #666;
+    margin: 0;
+}
+
+.order-date {
+    font-size: 14px;
+    color: #888;
+    margin: 5px 0 0 0;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.detail-row {
+    display: flex;
+    padding: 12px 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.detail-label {
+    font-weight: 500;
+    width: 140px;
+    color: #4a5568;
+    font-size: 14px;
+}
+
+.detail-value {
+    flex: 1;
+    color: #1a202c;
+    font-size: 14px;
+}
+
+.special-instructions {
+    margin-top: 25px;
+    padding: 20px;
+    background: #fff8dc;
+    border-radius: 8px;
+    border-left: 4px solid #ffd700;
+}
+
+.special-instructions-title {
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.special-instructions-content {
+    color: #4a5568;
+    font-size: 14px;
+    white-space: pre-line;
+}
+
+.footer {
+    margin-top: 40px;
+    padding-top: 25px;
+    border-top: 2px solid #f0f0f0;
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+}
+
+.business-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.info-title {
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.business-hours p,
+.contact-info p {
+    margin: 5px 0;
+    font-size: 13px;
+    color: #4a5568;
+}
+
+@media print {
+    body {
+        padding: 0;
+        background: none;
+    }
+
+    .print-content {
+        box-shadow: none;
+        padding: 20px;
+    }
+
+    .no-print {
+        display: none;
+    }
+
+    .detail-row {
+        break-inside: avoid;
+    }
+
+    .special-instructions {
+        break-inside: avoid;
+    }
+
+    .business-info {
+        break-inside: avoid;
+        background: none;
+        border: 1px solid #eee;
+    }
+}
+
+/* ... rest of your print styles ... */ 

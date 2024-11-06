@@ -1,0 +1,27 @@
+<!-- resources/views/cakes/create.blade.php -->
+@extends('layouts.app')
+
+@section('content')
+    <h1>Create Cake</h1>
+
+    <form action="{{ route('cakes.store') }}" method="POST">
+        @csrf
+
+        <div class="form-group">
+            <label for="type">Cake Type</label>
+            <input type="text" name="type" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="size">Size</label>
+            <input type="text" name="size" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input type="number" name="price" class="form-control" step="0.01" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Create Cake</button>
+    </form>
+@endsection
